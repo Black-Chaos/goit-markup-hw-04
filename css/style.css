@@ -1,0 +1,329 @@
+:root {
+  --header-nav-color: #2E2F42;
+  --main-text-color: #434455;
+  --title-color: #2E2F42;
+  --brand-color: #4D5AE5;
+  --active-element-color: #404BBF;
+  --accent-color: #E7E9FC;
+  --main-bg: #ffffff;
+  --light-bg: #F4F4FD;
+  --dark-bg: #2E2F42;
+  --dark-bg-title-color: #ffffff;
+  --dark-bg-element-color: #F4F4FD;
+
+  /* --outline: 2px solid red; */
+}
+
+body {
+  font: 400 16px/1.5 'Roboto', sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  background-color: var(--main-bg);
+}
+
+/*
+  ******************************
+   —————————— DEFAULT ——————————
+  ******************************
+*/
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.title,
+.subtitle {
+  color: var(--title-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1158px;
+  margin-inline: auto;
+  padding-inline: 15px;
+  /* outline: var(--outline); */
+}
+
+/*
+  ******************************
+   —————————— HEADER ——————————
+  ******************************
+*/
+
+.header {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font: 800 18px/1.17 'Raleway', sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.logo .accent {
+  color: var(--brand-color);
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 76px;
+  font-weight: 500;
+  color: var(--header-nav-color);
+}
+
+.header .list {
+  display: flex;
+  gap: 40px;
+}
+
+.contacts {
+  font-style: normal;
+}
+
+:where(.site-nav, .contacts) .link {
+  display: inline-block;
+  padding: 24px 0;
+}
+
+:where(.site-nav, .contacts) .link:is(:hover, :focus) {
+  color: var(--active-element-color);
+}
+
+/*
+  ******************************
+   —————————— MAIN ——————————
+  ******************************
+*/
+
+/*
+  ******************************
+   —————————— HERO ——————————
+  ******************************
+*/
+
+.hero {
+  padding: 188px 0;
+  text-align: center;
+  background-color: var(--dark-bg);
+}
+
+.hero .title {
+  max-width: 496px;
+  margin-inline: auto;
+  margin-bottom: 48px;
+  font-size: 56px;
+  line-height: 1.07;
+  color: var(--dark-bg-title-color);
+}
+
+.hero .btn {
+  padding: 16px 32px;
+  min-width: 169px;
+  text-transform: capitalize;
+  color: var(--dark-bg-title-color);
+  background-color: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+}
+
+.hero .btn:is(:hover, :focus) {
+  background-color: var(--active-element-color);
+}
+
+/*
+  ******************************
+   —————————— ABOUT ——————————
+  ******************************
+*/
+.about {
+  padding: 120px 0;
+}
+
+:where(.about, .work, .team) .list {
+  display: flex;
+  gap: 24px;
+}
+
+.about .item {
+  flex-basis: calc((100% - 24px * 3) / 4);
+}
+
+.about .subtitle {
+  margin-bottom: 8px;
+}
+
+/*
+  ******************************
+   —————————— WORK ——————————
+  ******************************
+*/
+.work {
+  padding-bottom: 120px;
+}
+
+.work .title {
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+/*
+  ******************************
+   —————————— TEAM ——————————
+  ******************************
+*/
+
+.team {
+  padding: 120px 0;
+  background-color: var(--light-bg);
+}
+
+.team .title {
+  margin-bottom: 72px;
+}
+
+.team-item {
+  background-color: var(--main-bg);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-item .desc {
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.team-item .subtitle {
+  margin-bottom: 8px;
+}
+
+/*
+  ******************************
+   —————————— FOOTER ——————————
+  ******************************
+*/
+
+.footer {
+  padding: 100px 0;
+  color: var(--dark-bg-element-color);
+  background-color: var(--dark-bg);
+}
+
+.footer .logo {
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.footer .text {
+  max-width: 264px;
+}
+
+/*
+  ******************************
+  ————————— PORTFOLIO —————————
+  ******************************
+*/
+.portfolio {
+  padding: 96px 0 120px;
+}
+
+.filter {
+  margin-bottom: 72px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.filter .btn {
+  padding: 12px 24px;
+  color: var(--brand-color);
+  background-color: var(--light-bg);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+.filter .btn:is(:hover, :focus) {
+  color: var(--dark-bg-title-color);
+  background-color: var(--active-element-color);
+  border-color: transparent;
+}
+
+.work-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.work-card .desc {
+  padding: 32px 16px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.work-card .subtitle {
+  margin-bottom: 8px;
+}
