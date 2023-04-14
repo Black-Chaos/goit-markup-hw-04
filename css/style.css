@@ -165,9 +165,15 @@ img {
 */
 
 .hero {
+  max-width: 1440px;
+  margin-inline: auto;
   padding: 188px 0;
   text-align: center;
   background-color: var(--dark-bg);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/studio/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero .title {
