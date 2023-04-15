@@ -205,17 +205,28 @@ img {
    —————————— ABOUT ——————————
   ******************************
 */
-.about {
-  padding: 120px 0;
-}
 
 :where(.about, .work, .team) .list {
   display: flex;
   gap: 24px;
 }
 
+.about {
+  padding: 120px 0;
+}
+
 .about .item {
   flex-basis: calc((100% - 24px * 3) / 4);
+}
+
+.thumb {
+  height: 112px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-bg);
+  border-radius: 4px;
 }
 
 .about .subtitle {
