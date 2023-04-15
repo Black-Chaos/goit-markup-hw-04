@@ -276,16 +276,16 @@ img {
   margin-bottom: 8px;
 }
 
-.social-lincs {
-  justify-content: space-between;
+.social-links {
+  justify-content: center;
 }
 
-.social-linc {
+.social-link {
   width: 40px;
   height: 40px;
 }
 
-.social-linc .link {
+.social-link .link {
   width: 100%;
   height: 100%;
   display: flex;
@@ -296,11 +296,11 @@ img {
   border-radius: 50%;
 }
 
-.social-linc .link:is(:hover, :focus) {
+.social-link .link:is(:hover, :focus) {
   background-color: var(--active-element-color);
 }
 
-.social-linc .social-icon {
+.social-link .social-icon {
   fill: currentColor;
 }
 
@@ -312,14 +312,17 @@ img {
 .clients {
   padding: 120px 0;
 }
+
 .clients .list {
   display: flex;
   gap: 24px;
 }
+
 .client {
   height: 88px;
   flex-grow: 1;
 }
+
 .client .link {
   width: 100%;
   height: 100%;
@@ -328,11 +331,13 @@ img {
   align-items: center;
   color: var(--default-color-clients);
   border: 1px solid var(--default-color-clients);
-    border-radius: 4px;
+  border-radius: 4px;
 }
+
 .client .icon {
   fill: currentColor;
 }
+
 .client .link:is(:hover, :focus) {
   color: var(--active-element-color);
   border-color: var(--active-element-color);
@@ -349,12 +354,17 @@ img {
   color: var(--dark-bg-element-color);
   background-color: var(--dark-bg);
 }
+
 .footer .container {
   display: flex;
 }
 
 .footer .container {
   display: flex;
+}
+
+.slogan {
+  margin-right: 120px;
 }
 
 .slogan .logo {
@@ -364,7 +374,6 @@ img {
 
 .slogan .text {
   max-width: 264px;
-  margin-right: 120px;
 }
 
 .footer .subtitle {
@@ -376,9 +385,9 @@ img {
   color: var(--dark-bg-title-color);
 }
 
-.social-media .social-lincs {
-  width: 208px;
+.social-media .social-links {
   display: flex;
+  gap: 16px;
 }
 
 .social-media .link:is(:hover, :focus) {
@@ -414,14 +423,20 @@ img {
   background-color: var(--active-element-color);
   border-color: transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+  border-radius: 4px;
 }
+
 .work-card {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
 }
-.card:has(.link:is(:hover, :focus)) {
+
+.card .link {
+  display: block;
+}
+
+.card .link:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
