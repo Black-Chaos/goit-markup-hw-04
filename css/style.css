@@ -11,6 +11,7 @@
   --dark-bg: #2E2F42;
   --dark-bg-title-color: #ffffff;
   --dark-bg-element-color: #F4F4FD;
+  --default-color-clients: #8E8F99;
 
   /* --outline: 2px solid red; */
 }
@@ -61,6 +62,7 @@ img {
 }
 
 .title {
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -109,6 +111,7 @@ img {
 
 .header {
   border-bottom: 1px solid var(--accent-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -243,11 +246,6 @@ img {
   padding-bottom: 120px;
 }
 
-.work .title {
-  margin-bottom: 72px;
-  text-align: center;
-}
-
 /*
   ******************************
    —————————— TEAM ——————————
@@ -257,10 +255,6 @@ img {
 .team {
   padding: 120px 0;
   background-color: var(--light-bg);
-}
-
-.team .title {
-  margin-bottom: 72px;
 }
 
 .team-item {
@@ -277,16 +271,20 @@ img {
 .team-item .subtitle {
   margin-bottom: 8px;
 }
+
 .team-item .text {
   margin-bottom: 8px;
 }
+
 .social-lincs {
   justify-content: space-between;
 }
+
 .social-linc {
   width: 40px;
   height: 40px;
 }
+
 .social-linc .link {
   width: 100%;
   height: 100%;
@@ -297,11 +295,47 @@ img {
   background-color: var(--brand-color);
   border-radius: 50%;
 }
+
 .social-linc .link:is(:hover, :focus) {
   background-color: var(--active-element-color);
 }
+
 .social-linc .social-icon {
   fill: currentColor;
+}
+
+/*
+  ******************************
+   —————————— CLIENTS ——————————
+  ******************************
+*/
+.clients {
+  padding: 120px 0;
+}
+.clients .list {
+  display: flex;
+  gap: 24px;
+}
+.client {
+  height: 88px;
+  flex-grow: 1;
+}
+.client .link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--default-color-clients);
+  border: 1px solid var(--default-color-clients);
+    border-radius: 4px;
+}
+.client .icon {
+  fill: currentColor;
+}
+.client .link:is(:hover, :focus) {
+  color: var(--active-element-color);
+  border-color: var(--active-element-color);
 }
 
 /*
@@ -319,6 +353,10 @@ img {
   display: flex;
 }
 
+.footer .container {
+  display: flex;
+}
+
 .slogan .logo {
   margin-bottom: 16px;
   display: inline-block;
@@ -328,6 +366,7 @@ img {
   max-width: 264px;
   margin-right: 120px;
 }
+
 .footer .subtitle {
   padding-bottom: 16px;
   display: inline-block;
@@ -336,10 +375,12 @@ img {
   line-height: 1.5;
   color: var(--dark-bg-title-color);
 }
+
 .social-media .social-lincs {
   width: 208px;
   display: flex;
 }
+
 .social-media .link:is(:hover, :focus) {
   background-color: var(--active-element-footer);
 }
@@ -372,12 +413,16 @@ img {
   color: var(--dark-bg-title-color);
   background-color: var(--active-element-color);
   border-color: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
-
 .work-card {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
+}
+.card:has(.link:is(:hover, :focus)) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .work-card .desc {
